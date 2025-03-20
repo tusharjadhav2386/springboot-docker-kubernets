@@ -54,7 +54,7 @@ pipeline {
         {
          steps{
          script{
-         sh 'docker run -p 9090:8081 springboot-docker-kubernets '
+         sh 'docker run -p 9090:8085 springboot-docker-kubernets'
          }
          }
         }
