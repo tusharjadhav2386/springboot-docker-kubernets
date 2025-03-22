@@ -58,7 +58,7 @@ pipeline {
             script
             {
                // kubernetesDeploy configs: 'deployment.yaml',kubeconfigId: 'k8sconfig'
-               kubeconfig(credentialsId: 'kubernetsAuth', serverUrl: '192.168.49.2:8443') {
+               kubeconfig(credentialsId: 'kubernetsAuth', serverUrl: '127.0.0.1:61996') {
                    // some block
                sh 'kubectl apply -f k8s/deployment.yaml'
 
