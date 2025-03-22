@@ -57,7 +57,11 @@ pipeline {
            {
             script
             {
-                kubernetesDeploy configs: 'deployment.yaml',kubeconfigId: 'k8sconfig'
+               // kubernetesDeploy configs: 'deployment.yaml',kubeconfigId: 'k8sconfig'
+               kubeconfig(credentialsId: 'k8sconfig') {
+               sh 'kubectl apply -f k8s/deployment.yaml'
+
+               }
              }
            }
          }
