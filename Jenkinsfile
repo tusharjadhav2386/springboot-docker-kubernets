@@ -57,7 +57,7 @@ pipeline {
            {
             script
             {
-                kubernetesDeploy (configs: 'deployment.yaml',kubeconfigId: 'k8sconfig')
+                kubernetesDeploy configs: 'deployment.yaml',kubeconfigId: 'k8sconfig'
              }
            }
          }
