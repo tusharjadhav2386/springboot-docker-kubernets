@@ -18,4 +18,4 @@ spec:
           image: tusharjadhav2386/dockertesting1:springboot-docker-kubernets
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8081
+            - containerPort: 8086
