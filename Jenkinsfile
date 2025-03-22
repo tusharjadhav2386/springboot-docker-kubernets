@@ -51,11 +51,22 @@ pipeline {
 
          }
 
-          stage('RunDocr image')
+         stage('Deploy to k8s')
+         {
+           steps
+           {
+            script
+            {
+                kubernetesDeploy (configs: 'deployment.yaml',kubeconfigId: 'k8sconfig')
+             }
+           }
+         }
+
+         stage('RunDocr image')
         {
          steps{
          script{
-         sh 'docker run -p 9090:8085 springboot-docker-kubernets'
+         sh 'docker run -p 8080:8080 springboot-docker-kubernets'
          }
          }
         }
