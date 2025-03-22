@@ -42,8 +42,8 @@ pipeline {
           //sh 'docker login -u tusharjadhav2386 -p tushar@2386'
 
           withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub')]) {
-            sh 'docker tag springboot-docker-kubernets tusharjadhav2386/testingdocker:springboot-docker-kubernets'
-            sh 'docker push tusharjadhav2386/testingdocker:springboot-docker-kubernets'
+            sh 'docker tag springboot-docker-kubernets tusharjadhav2386/dockertesting1:springboot-docker-kubernets'
+            sh 'docker push tusharjadhav2386/dockertesting1:springboot-docker-kubernets'
           }
 
               }
