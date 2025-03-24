@@ -59,7 +59,7 @@ pipeline {
            {
             script
             {
-                kubernetesDeploy configs: 'deployment.yaml',kubeconfigId: 'k8sconfig'
+                kubernetesDeploy (configs: 'deployment.yaml',kubeconfigId: 'kubeconfig')
               // kubernetesDeploy configs: '', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
               // kubeconfig(credentialsId: 'kubernetsAuth', serverUrl: '127.0.0.1:61996') {
               //  withKubeConfig([credentialsId: 'kubernetsAuth', serverUrl: 'https://127.0.0.1:50597']) {  // some block
