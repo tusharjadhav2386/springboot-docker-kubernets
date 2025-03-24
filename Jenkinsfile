@@ -77,7 +77,8 @@ pipeline {
              {
                 steps{
                    script{
-                          sh 'docker run -p 8086:8086 springboot-docker-kubernets'
+                         // sh 'docker run -p 8086:8086 springboot-docker-kubernets'
+                         sh 'docker run -d -p 8086:8086 --name springboot-docker-kubernets springboot-docker-kubernets'
                           }
                           }
                          }
@@ -85,6 +86,8 @@ pipeline {
 
       }
          post {
+
+
                  success {
                      echo 'Build successful'
                  }
