@@ -12,6 +12,6 @@ public class FrontController {
     @GetMapping("/getInfo")
     public String getInfo()
     {
-        return "getinfo successfully";
+        return "getinfo successfully updated---------";
     }
 }
