@@ -51,14 +51,7 @@ pipeline {
 
          }
 
-            stage('RunDocr image')
-             {
-                steps{
-                   script{
-                          sh 'docker run -p 8086:8086 springboot-docker-kubernets'
-                          }
-                          }
-                         }
+
 
          stage('Deploy to k8s')
          {
@@ -79,7 +72,14 @@ pipeline {
            }
          }
 
-
+        stage('RunDocr image')
+             {
+                steps{
+                   script{
+                          sh 'docker run -p 8086:8086 springboot-docker-kubernets'
+                          }
+                          }
+                         }
 
 
       }
